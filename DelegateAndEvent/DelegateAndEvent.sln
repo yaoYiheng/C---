@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateAndEvent", "DelegateAndEvent\DelegateAndEvent.csproj", "{2695B4FD-983D-45E8-AE1A-CE99D0C10B50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2695B4FD-983D-45E8-AE1A-CE99D0C10B50}.Debug|x86.ActiveCfg = Debug|x86
+		{2695B4FD-983D-45E8-AE1A-CE99D0C10B50}.Debug|x86.Build.0 = Debug|x86
+		{2695B4FD-983D-45E8-AE1A-CE99D0C10B50}.Release|x86.ActiveCfg = Release|x86
+		{2695B4FD-983D-45E8-AE1A-CE99D0C10B50}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal

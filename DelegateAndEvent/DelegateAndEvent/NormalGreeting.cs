@@ -6,7 +6,12 @@ namespace DelegateAndEvent
 
         public void MorningiGreeting(string name)
         {
-            Console.WriteLine("早上好");
+            Console.WriteLine("早上好! " + name);
+        }
+
+        public void NightGreeting(string name)
+        {
+            Console.WriteLine("晚上好! " + name);
         }
     }
 }

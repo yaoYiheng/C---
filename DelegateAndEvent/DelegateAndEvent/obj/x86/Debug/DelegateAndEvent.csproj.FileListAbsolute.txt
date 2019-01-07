@@ -4,3 +4,9 @@
 /Users/yiheng/Documents/C#相关/DelegateAndEvent/DelegateAndEvent/obj/x86/Debug/DelegateAndEvent.csproj.CoreCompileInputs.cache
 /Users/yiheng/Documents/C#相关/DelegateAndEvent/DelegateAndEvent/obj/x86/Debug/DelegateAndEvent.exe
 /Users/yiheng/Documents/C#相关/DelegateAndEvent/DelegateAndEvent/obj/x86/Debug/DelegateAndEvent.pdb
+/Users/yiheng/Documents/C#相关/C---/DelegateAndEvent/DelegateAndEvent/bin/Debug/DelegateAndEvent.exe
+/Users/yiheng/Documents/C#相关/C---/DelegateAndEvent/DelegateAndEvent/bin/Debug/DelegateAndEvent.pdb
+/Users/yiheng/Documents/C#相关/C---/DelegateAndEvent/DelegateAndEvent/obj/x86/Debug/DelegateAndEvent.csprojResolveAssemblyReference.cache
+/Users/yiheng/Documents/C#相关/C---/DelegateAndEvent/DelegateAndEvent/obj/x86/Debug/DelegateAndEvent.csproj.CoreCompileInputs.cache
+/Users/yiheng/Documents/C#相关/C---/DelegateAndEvent/DelegateAndEvent/obj/x86/Debug/DelegateAndEvent.exe
+/Users/yiheng/Documents/C#相关/C---/DelegateAndEvent/DelegateAndEvent/obj/x86/Debug/DelegateAndEvent.pdb

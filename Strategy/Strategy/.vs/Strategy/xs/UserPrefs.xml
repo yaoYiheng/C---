@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{473EC0B4-EF08-4730-BDD5-991BEFEDF713}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DiscountCash.cs">
+    <Files>
+      <File FileName="BaseCash.cs" Line="9" Column="1" />
+      <File FileName="DiscountCash.cs" Line="9" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Strategy PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

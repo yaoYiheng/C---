@@ -1,4 +1,5 @@
 ﻿using System;
+using DelegateAndEvent.Properties;
 
 namespace DelegateAndEvent
 {
@@ -11,6 +12,8 @@ namespace DelegateAndEvent
     //带有返回值, 参数为值类型
     public delegate int NumOperatorDelegate(int num);
 
+    public delegate void ExceptionDelegate();
+
 
     //带有返回值, 参数为引用类型
     public delegate int NumRefDelegate(ref int num);
@@ -22,13 +25,57 @@ namespace DelegateAndEvent
 
             //NumDelegateTest();
 
-            NumOperatorTest();
+            //NumOperatorTest();
 
             //NumRefTest();
+
+            ExceptionTest();
+
         }
 
 
 
+        //异常委托测试
+        static void ExceptionTest()
+        {
+            ExceptionDelegate exceptionDelegate = ExcptionTest.Method1;
+            exceptionDelegate += ExcptionTest.Method2;
+            exceptionDelegate += ExcptionTest.Method1;
+            exceptionDelegate += ExcptionTest.Method2;
+
+
+
+            Delegate[] delegates = exceptionDelegate.GetInvocationList();
+            foreach (ExceptionDelegate item in delegates)
+            {
+                try
+                {
+                    item();
+                }
+                catch
+                {
+                    Console.WriteLine("捕获异常");
+                }
+            }
+
+            Console.WriteLine("------------");
+            for (int i = 0; i < delegates.Length; i++)
+            {
+                try
+                {
+                    (delegates[i] as ExceptionDelegate)();
+                }
+                catch
+                {
+                    Console.WriteLine("捕获异常");
+                }
+
+            }
+
+        }
+
+
+        // 引用参数委托测试
         static void NumRefTest()
         {
             int num = 100;

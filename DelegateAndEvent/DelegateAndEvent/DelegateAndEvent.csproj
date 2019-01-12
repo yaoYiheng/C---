@@ -37,6 +37,10 @@
     <Compile Include="NormalGreeting.cs" />
     <Compile Include="FestivalGreeting.cs" />
     <Compile Include="NumTest.cs" />
+    <Compile Include="Properties\ExcptionTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\新建文件夹\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

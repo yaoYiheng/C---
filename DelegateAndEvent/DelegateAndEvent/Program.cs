@@ -4,11 +4,20 @@ namespace DelegateAndEvent
 {
     //声明delegate
     public delegate void GreetingDelegate (string name);
+
+    //声明带返回值的代理
+    public delegate int NumDelegate();
+
     class MainClass
     {
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+        }
+
+        static void GreatingDelegateTest()
+        {
+            
 
             NormalGreeting normalGreeting = new NormalGreeting();
 
@@ -32,9 +41,10 @@ namespace DelegateAndEvent
             GreetingDelegate greeting3 = greeting1 + greeting2 + greeting;
             greeting3("Morris");
             Console.WriteLine("---------");
+            //移除
             greeting3 -= greeting1;
 
-            greeting3("morris");
+            greeting3("morris");  
         }
     }
 }

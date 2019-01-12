@@ -14,4 +14,38 @@ namespace DelegateAndEvent
             return 20;
         }
     }
+
+    public class NumOprator
+    {
+        public static int NumInCreaseTest1(int num)
+        {
+            Console.WriteLine("自增调用");
+            num++;
+            return num;
+        }
+        public static int NumDecreaseTest2(int num)
+        {
+            Console.WriteLine("自减调用");
+
+            num--;
+            return num;
+        }
+    }
+
+    public class NumRef
+    {
+        public static int NumRefTest1(ref int num)
+        {
+            Console.WriteLine("自增调用");
+            num++;
+            return num;
+        }
+        public static int NumRefTest2(ref int num)
+        {
+            Console.WriteLine("自减调用");
+
+            num--;
+            return num;
+        }
+    }
 }

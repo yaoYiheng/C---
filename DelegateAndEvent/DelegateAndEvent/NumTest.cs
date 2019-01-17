@@ -30,6 +30,11 @@ namespace DelegateAndEvent
             num--;
             return num;
         }
+        public static int NumDouble(int num)
+        {
+            Console.WriteLine("2倍调用");
+            return 2 * num;
+        }
     }
 
     public class NumRef

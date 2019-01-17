@@ -15,6 +15,7 @@ namespace DelegateAndEvent
     public delegate void ExceptionDelegate();
 
 
+
     //带有返回值, 参数为引用类型
     public delegate int NumRefDelegate(ref int num);
     class MainClass
@@ -29,11 +30,30 @@ namespace DelegateAndEvent
 
             //NumRefTest();
 
-            ExceptionTest();
+            //ExceptionTest();
+
+            //匿名方法
+            AnoymouseMethodTest();
 
         }
 
 
+        //匿名方法测试
+        static void AnoymouseMethodTest()
+        {
+            NumOperatorDelegate numDel = delegate(int num) 
+            {
+        
+                Console.WriteLine("翻倍");
+
+                return 2 * num;
+            };
+
+            numDel += (num) => { return 3 * num; };
+
+
+            Console.WriteLine(numDel(2));
+        }
 
         //异常委托测试
         static void ExceptionTest()

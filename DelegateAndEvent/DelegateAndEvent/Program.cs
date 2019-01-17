@@ -14,7 +14,7 @@ namespace DelegateAndEvent
 
     public delegate void ExceptionDelegate();
 
-
+    public delegate void TeamDelegate(string name, params string[] names);
 
     //带有返回值, 参数为引用类型
     public delegate int NumRefDelegate(ref int num);
@@ -33,8 +33,40 @@ namespace DelegateAndEvent
             //ExceptionTest();
 
             //匿名方法
-            AnoymouseMethodTest();
+            //AnoymouseMethodTest();
 
+            //TeamIntroduce("蓝队", "包", "猪", "头");
+            //TeamIntroduce("红队", "鸡", "狗");
+
+            TeamDelegateTest();
+
+        }
+
+
+        static void TeamDelegateTest()
+        {
+            TeamDelegate teamDelegate = delegate(string name, string[] names)
+            {
+                Console.WriteLine("队名:" + name);
+                Console.WriteLine("队员:");
+                foreach (var item in names)
+                {
+                    Console.WriteLine(item);
+                }
+
+            };
+
+            teamDelegate("黄队", "BBB", "小母鸟");
+        }
+
+        static void TeamIntroduce(string teamName, params string[] members)
+        {
+            Console.WriteLine("队名:" + teamName);
+            Console.WriteLine("队员:");
+            foreach (var item in members)
+            {
+                Console.WriteLine(item);
+            }
         }
 
 

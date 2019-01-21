@@ -18,6 +18,8 @@ namespace DelegateAndEvent
 
     //带有返回值, 参数为引用类型
     public delegate int NumRefDelegate(ref int num);
+
+    public delegate void VariableDelegate(int num);
     class MainClass
     {
         public static void Main(string[] args)
@@ -38,8 +40,35 @@ namespace DelegateAndEvent
             //TeamIntroduce("蓝队", "包", "猪", "头");
             //TeamIntroduce("红队", "鸡", "狗");
 
-            TeamDelegateTest();
+            //TeamDelegateTest();
 
+            VariableTest();
+        }
+
+        static void VariableTest()
+        {
+            int temp = 40;
+
+            VariableDelegate variableDelegate = delegate (int x)
+            {
+                Console.WriteLine(temp + x);
+
+            };
+
+            variableDelegate(10);
+        }
+        static int Test(int n)
+        {
+            if (n< 0)
+            {
+                n = 0;
+            }
+
+            if (n == 0 || n == 1)
+            {
+                return n;
+            }
+            return Test(n - 1) + Test(n - 2);
         }
 
 

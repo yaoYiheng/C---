@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{2695B4FD-983D-45E8-AE1A-CE99D0C10B50}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="DelegateAndEvent/Program.cs">
     <Files>
-      <File FileName="DelegateAndEvent/Program.cs" Line="44" Column="34" />
+      <File FileName="DelegateAndEvent/Program.cs" Line="76" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

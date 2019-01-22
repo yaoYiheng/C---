@@ -20,6 +20,8 @@ namespace DelegateAndEvent
     public delegate int NumRefDelegate(ref int num);
 
     public delegate void VariableDelegate(int num);
+
+    public delegate int LambdaDelegate(int num);
     class MainClass
     {
         public static void Main(string[] args)
@@ -42,20 +44,57 @@ namespace DelegateAndEvent
 
             //TeamDelegateTest();
 
-            VariableTest();
+            //VariableTest();
+
+            LambdaTest();
+        }
+
+
+        static void LambdaTest()
+        {
+            //lambda正常状态.
+            //LambdaDelegate lambda = delegate (int num)
+            //{
+            //    return num * num;
+            //};
+
+            //关键字delegate可以省略
+            //在参数裂变与匿名方法主体之间, 放Lambda运算符 "=>"
+            //Lambda表达式可省略参数类型
+            //以上可以改写为
+            //LambdaDelegate lambda = (num) =>
+            //{
+            //    return num * num;
+            //};
+
+            //如果只有一个隐式类型参数, 可省略圆括号
+            LambdaDelegate lambda = num =>  num * num;
+
+            //如果匿名方法没有参数, 必须使用空的圆括号
+            NumDelegate numDelegate = () => 1000;
+
+            //记得调用的是需要添加()括号.
+            Console.WriteLine("调用没有参数的委托: " + numDelegate());
+
+            Console.WriteLine(lambda(20));
         }
 
         static void VariableTest()
         {
             int temp = 40;
 
+
+            //在这里temp可以被作用域内部所捕获, 但是这里并没有进行计算, 而只是初始化
             VariableDelegate variableDelegate = delegate (int x)
             {
                 Console.WriteLine(temp + x);
 
             };
+            //在这里对temp值进行更新
+            temp = 100;
 
-            variableDelegate(10);
+            //再次进行调用的时候, 会使用最新的temp值.
+            variableDelegate(10); 
         }
         static int Test(int n)
         {

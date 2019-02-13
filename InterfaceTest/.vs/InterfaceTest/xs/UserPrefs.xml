@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{819983DD-E894-445F-BFA9-4EEDF4FB6CF8}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="InterfaceTest/Program.cs">
+    <Files>
+      <File FileName="InterfaceTest/Program.cs" Line="12" Column="41" />
+      <File FileName="InterfaceTest/Properties/IReader.cs" Line="6" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.InterfaceTest PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

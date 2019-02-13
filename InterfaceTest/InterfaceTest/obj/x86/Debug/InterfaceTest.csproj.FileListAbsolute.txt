@@ -1,0 +1,6 @@
+/Users/yiheng/Documents/C#相关/C---/InterfaceTest/InterfaceTest/bin/Debug/InterfaceTest.exe
+/Users/yiheng/Documents/C#相关/C---/InterfaceTest/InterfaceTest/bin/Debug/InterfaceTest.pdb
+/Users/yiheng/Documents/C#相关/C---/InterfaceTest/InterfaceTest/obj/x86/Debug/InterfaceTest.csprojResolveAssemblyReference.cache
+/Users/yiheng/Documents/C#相关/C---/InterfaceTest/InterfaceTest/obj/x86/Debug/InterfaceTest.csproj.CoreCompileInputs.cache
+/Users/yiheng/Documents/C#相关/C---/InterfaceTest/InterfaceTest/obj/x86/Debug/InterfaceTest.exe
+/Users/yiheng/Documents/C#相关/C---/InterfaceTest/InterfaceTest/obj/x86/Debug/InterfaceTest.pdb

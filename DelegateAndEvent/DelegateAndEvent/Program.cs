@@ -1,4 +1,5 @@
 ﻿using System;
+
 using DelegateAndEvent.Properties;
 
 namespace DelegateAndEvent
@@ -22,8 +23,13 @@ namespace DelegateAndEvent
     public delegate void VariableDelegate(int num);
 
     public delegate int LambdaDelegate(int num);
+
+
     class MainClass
     {
+        public static string test = "Sword Art Online";
+
+
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -46,7 +52,128 @@ namespace DelegateAndEvent
 
             //VariableTest();
 
-            LambdaTest();
+            //LambdaTest();
+
+            //ActionTest();
+
+            //FuncDelegateTest();
+
+
+            StudentCompareTest();
+        }
+
+        static void StudentCompareTest()
+        {
+            Random random = new Random();
+            //创建随机学生数组
+            var stuArr = new Student[10];
+            for (int i = 0; i < stuArr.Length; i++)
+            {
+                stuArr[i] = new Student(random.Next(18, 35), random.Next(0, 151));
+            }
+
+            foreach (var item in stuArr)
+            {
+                item.show();
+            }
+            Console.WriteLine("______________");
+            Func<Student, Student, int> func = Student.CompareAge;
+
+            BubbleSort<Student>(stuArr, func);
+            foreach (var item in stuArr)
+            {
+                item.show();
+            }
+
+        }
+
+        static void BubbleSort<T>(T[] targetArr, Func<T, T, int> compare)
+        {
+            for (int i = 0; i < targetArr.Length - 1;i++)
+            {
+                for (int j = i + 1; j < targetArr.Length;j++)
+                {
+                    if (compare(targetArr[i], targetArr[j]) > 0)
+                    {
+                        var temp = targetArr[i];
+                        targetArr[i] = targetArr[j];
+                        targetArr[j] = temp;
+                    }
+                }
+            }
+        }
+        //冒泡
+        static void BubbleSort(int[] intArr)
+        {
+            for (int i = 0; i < intArr.Length - 1; i++)
+            {
+                for (int j = i + 1; j < intArr.Length; j++)
+                {
+                    if (intArr[i] < intArr[j])
+                    {
+                        var temp = intArr[i];
+
+                        intArr[i] = intArr[j];
+                        intArr[j] = temp;
+                    }
+                }
+            }
+        }
+        static void BubbleTest()
+        {
+            var tempArr = new int[5];
+            Random random = new Random();
+
+            for (int i = 0; i < tempArr.Length; i++)
+            {
+                tempArr[i] = random.Next();
+
+            }
+            foreach (var item in tempArr)
+            {
+                Console.WriteLine(item);
+            }
+            BubbleSort(tempArr);
+            Console.WriteLine("----------");
+            foreach (var item in tempArr)
+            {
+                Console.WriteLine(item);
+            }
+
+
+        }
+        // Func委托测试
+        static void FuncDelegateTest()
+        {
+            //无参数, 返回值为int类型
+            Func<int> func = NumTest.NumTest1;
+            Console.WriteLine(func());
+
+            //多个参数, 返回值为int
+            //匿名方法
+            Func<int, int, int, int> func1 = (a, b, c) => a + b + c;
+            Console.WriteLine(func1(11, 22, 33));
+
+        }
+
+
+        //Action 委托测试
+        //C#自带的委托类型Action. 使用泛型Action<>可带1-16个参数, 但没有返回值
+        //Action 不带参数,无返回值
+        static void ActionTest()
+        {
+            Action action = ExcptionTest.Method2;
+            action();
+
+            Action<int> action1 = x => Console.WriteLine(x + 100);
+            action1(100);
+
+            Action<int, float, double, string> action2 = (IntNum, floatNum, doubleNum, stringStr) =>
+           {
+               var temp = string.Format("参数1:{0} + 参数2: {1}, +参数3:{2}, + 参数4:{3}", IntNum, floatNum, doubleNum, stringStr);
+                Console.WriteLine(temp);
+           };
+            action2(11, 10000, 1222, "hahah");
         }
 
 

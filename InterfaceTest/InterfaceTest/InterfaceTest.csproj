@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{2695B4FD-983D-45E8-AE1A-CE99D0C10B50}</ProjectGuid>
+    <ProjectGuid>{819983DD-E894-445F-BFA9-4EEDF4FB6CF8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DelegateAndEvent</RootNamespace>
-    <AssemblyName>DelegateAndEvent</AssemblyName>
+    <RootNamespace>InterfaceTest</RootNamespace>
+    <AssemblyName>InterfaceTest</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -34,14 +34,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="NormalGreeting.cs" />
-    <Compile Include="FestivalGreeting.cs" />
-    <Compile Include="NumTest.cs" />
-    <Compile Include="Properties\ExcptionTest.cs" />
-    <Compile Include="Student.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\新建文件夹\" />
+    <Compile Include="Properties\IReader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

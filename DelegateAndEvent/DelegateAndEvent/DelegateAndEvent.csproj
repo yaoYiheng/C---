@@ -39,6 +39,7 @@
     <Compile Include="NumTest.cs" />
     <Compile Include="Properties\ExcptionTest.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="Properties\NumJudge.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\新建文件夹\" />

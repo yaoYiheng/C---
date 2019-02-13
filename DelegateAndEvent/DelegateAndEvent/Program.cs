@@ -5,7 +5,7 @@ using DelegateAndEvent.Properties;
 namespace DelegateAndEvent
 {
     //声明delegate
-    public delegate void GreetingDelegate (string name);
+    public delegate void GreetingDelegate(string name);
 
     //声明带返回值的代理
     public delegate int NumDelegate();
@@ -59,7 +59,52 @@ namespace DelegateAndEvent
             //FuncDelegateTest();
 
 
-            StudentCompareTest();
+            //StudentCompareTest();
+
+            PredicateTest();
+
+        }
+
+        static void PredicateTest()
+        {
+            Predicate<int> predicate = NumJudge.ExponentJudge;
+            ShowAll(0, 100, predicate);
+
+            Predicate<Student> predicateStu = stu => stu.Score >= 90;
+
+            Random random = new Random();
+            //创建随机学生数组
+            var stuArr = new Student[10];
+            for (int i = 0; i < stuArr.Length; i++)
+            {
+                stuArr[i] = new Student(random.Next(18, 35), random.Next(0, 151));
+            }
+
+
+            var Stus = Array.FindAll(stuArr, stu => stu.Age > 25);
+
+            foreach (var item in Stus)
+            {
+                item.show();
+            }
+            //for (int i = 0; i < stuArr.Length; i++)
+            //{
+            //    if (predicateStu(stuArr[i]))
+            //    {
+            //        stuArr[i].show();
+            //    }
+            //}
+        }
+        //显示所有满足条件的数
+        static void ShowAll(int start, int end, Predicate<int> predicate)
+        {
+            for (int i = start; i < end; i++)
+            {
+                if (predicate(i))
+                {
+                    Console.WriteLine(i);
+                }
+            }
         }
 
         static void StudentCompareTest()
@@ -89,9 +134,9 @@ namespace DelegateAndEvent
 
         static void BubbleSort<T>(T[] targetArr, Func<T, T, int> compare)
         {
-            for (int i = 0; i < targetArr.Length - 1;i++)
+            for (int i = 0; i < targetArr.Length - 1; i++)
             {
-                for (int j = i + 1; j < targetArr.Length;j++)
+                for (int j = i + 1; j < targetArr.Length; j++)
                 {
                     if (compare(targetArr[i], targetArr[j]) > 0)
                     {
@@ -171,7 +216,7 @@ namespace DelegateAndEvent
             Action<int, float, double, string> action2 = (IntNum, floatNum, doubleNum, stringStr) =>
            {
                var temp = string.Format("参数1:{0} + 参数2: {1}, +参数3:{2}, + 参数4:{3}", IntNum, floatNum, doubleNum, stringStr);
-                Console.WriteLine(temp);
+               Console.WriteLine(temp);
            };
             action2(11, 10000, 1222, "hahah");
         }
@@ -195,7 +240,7 @@ namespace DelegateAndEvent
             //};
 
             //如果只有一个隐式类型参数, 可省略圆括号
-            LambdaDelegate lambda = num =>  num * num;
+            LambdaDelegate lambda = num => num * num;
 
             //如果匿名方法没有参数, 必须使用空的圆括号
             NumDelegate numDelegate = () => 1000;
@@ -221,11 +266,11 @@ namespace DelegateAndEvent
             temp = 100;
 
             //再次进行调用的时候, 会使用最新的temp值.
-            variableDelegate(10); 
+            variableDelegate(10);
         }
         static int Test(int n)
         {
-            if (n< 0)
+            if (n < 0)
             {
                 n = 0;
             }
@@ -240,7 +285,7 @@ namespace DelegateAndEvent
 
         static void TeamDelegateTest()
         {
-            TeamDelegate teamDelegate = delegate(string name, string[] names)
+            TeamDelegate teamDelegate = delegate (string name, string[] names)
             {
                 Console.WriteLine("队名:" + name);
                 Console.WriteLine("队员:");
@@ -268,9 +313,9 @@ namespace DelegateAndEvent
         //匿名方法测试
         static void AnoymouseMethodTest()
         {
-            NumOperatorDelegate numDel = delegate(int num) 
+            NumOperatorDelegate numDel = delegate (int num)
             {
-        
+
                 Console.WriteLine("翻倍");
 
                 return 2 * num;
@@ -362,7 +407,7 @@ namespace DelegateAndEvent
         //无返回值委托测试
         static void GreatingDelegateTest()
         {
-            
+
 
             NormalGreeting normalGreeting = new NormalGreeting();
 
@@ -389,7 +434,7 @@ namespace DelegateAndEvent
             //移除
             //greeting3 -= greeting1;
 
-            greeting3("morris");  
+            greeting3("morris");
         }
     }
 }

@@ -1,15 +1,16 @@
 ﻿<Properties StartupConfiguration="{2695B4FD-983D-45E8-AE1A-CE99D0C10B50}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DelegateAndEvent/Program.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="DelegateAndEvent/Program.cs" Line="96" Column="62" />
-      <File FileName="DelegateAndEvent/Student.cs" Line="16" Column="58" />
+      <File FileName="DelegateAndEvent/Program.cs" Line="73" Column="22" />
+      <File FileName="DelegateAndEvent/Student.cs" Line="14" Column="21" />
+      <File FileName="DelegateAndEvent/Properties/NumJudge.cs" Line="28" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.ItemProperties.DelegateAndEvent PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>

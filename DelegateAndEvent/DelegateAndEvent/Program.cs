@@ -80,10 +80,10 @@ namespace DelegateAndEvent
             Client c1 = new Client("张三");
             Client c2 = new Client("张四");
 
-            dealer.NewGoosArrival += c1.GetGoodsInfo;
-            dealer.NewGoosArrival += c2.GetGoodsInfo;
+            dealer.OnGoodsArrival += c1.GetGoodsInfo;
+            dealer.OnGoodsArrival += c2.GetGoodsInfo;
 
-            dealer.NewGoogsArrival("无人机", 7432.5f);
+            dealer.NewArrival("无人机", 7432.5f);
         }
 
         static void PredicateTest()

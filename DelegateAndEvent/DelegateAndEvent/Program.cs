@@ -66,7 +66,21 @@ namespace DelegateAndEvent
             //Console.WriteLine(4 & 1);
             //Console.WriteLine(Math.Pow(2, 0));
 
-            EventsTest();
+            //EventsTest();
+
+            EventDelegateTest();
+        }
+        /// <summary>
+        /// 事件的显示/隐式声明
+        /// </summary>
+        static void EventDelegateTest()
+        {
+            NormalGreeting greeting = new NormalGreeting();
+            greeting.Init();
+
+            greeting.GreetingEvent += FestivalGreeting.XmasGreeting;
+
+            greeting.DoingGreeting("Momo");
 
         }
 

@@ -40,6 +40,8 @@
     <Compile Include="Properties\ExcptionTest.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Properties\NumJudge.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Dealer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\新建文件夹\" />

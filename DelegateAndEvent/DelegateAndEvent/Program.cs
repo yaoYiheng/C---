@@ -61,8 +61,29 @@ namespace DelegateAndEvent
 
             //StudentCompareTest();
 
-            PredicateTest();
+            //PredicateTest();
 
+            //Console.WriteLine(4 & 1);
+            //Console.WriteLine(Math.Pow(2, 0));
+
+            EventsTest();
+
+        }
+
+        /// <summary>
+        /// 事件触发
+        /// </summary>
+        static void EventsTest()
+        {
+            Dealer dealer = new Dealer("xx商场");
+
+            Client c1 = new Client("张三");
+            Client c2 = new Client("张四");
+
+            dealer.NewGoosArrival += c1.GetGoodsInfo;
+            dealer.NewGoosArrival += c2.GetGoodsInfo;
+
+            dealer.NewGoogsArrival("无人机", 7432.5f);
         }
 
         static void PredicateTest()

@@ -70,24 +70,39 @@ namespace DelegateAndEvent
 
             //EventDelegateTest();
 
-            TimerTest();
+            //TimerTest();
+
+            Heater heater = new Heater(90);
+
+            Displayer displayer = new Displayer();
+            Alarm alarm = new Alarm();
+
+            heater.OnHeatHandler += alarm.Alarming;
+            heater.HeaterHandler += displayer.ShowTemperatuer;
+
+            heater.StartHeating();
+
+
             Console.ReadLine();
         }
         public static int numCount = 0;
         static void TimerTest()
         {
+            //创建一个Timer计时器类, 初始化传入1000位时间间隔, 单位为毫秒
             Timer timer = new Timer(1000);
+            //对事件进行监听.
             timer.Elapsed += (sender, e) =>
             {
                 numCount++;
                 Console.WriteLine(e.SignalTime + "numCount = " + numCount);
                 if (numCount == 10)
                 {
+                    //sender作为调用这个函数的对象, 调用其Stop()方法使其停止
                     (sender as Timer).Stop();
                     Console.WriteLine("计数停止");
                 }
             };
-
+            //启动计时器
             timer.Start();
         }
         /// <summary>

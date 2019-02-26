@@ -43,6 +43,9 @@
     <Compile Include="Client.cs" />
     <Compile Include="Dealer.cs" />
     <Compile Include="GoogsEventHandler.cs" />
+    <Compile Include="Heater.cs" />
+    <Compile Include="Displayer.cs" />
+    <Compile Include="Alarm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\新建文件夹\" />

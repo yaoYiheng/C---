@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Timers;
 using DelegateAndEvent.Properties;
 
 namespace DelegateAndEvent
@@ -68,7 +68,27 @@ namespace DelegateAndEvent
 
             //EventsTest();
 
-            EventDelegateTest();
+            //EventDelegateTest();
+
+            TimerTest();
+            Console.ReadLine();
+        }
+        public static int numCount = 0;
+        static void TimerTest()
+        {
+            Timer timer = new Timer(1000);
+            timer.Elapsed += (sender, e) =>
+            {
+                numCount++;
+                Console.WriteLine(e.SignalTime + "numCount = " + numCount);
+                if (numCount == 10)
+                {
+                    (sender as Timer).Stop();
+                    Console.WriteLine("计数停止");
+                }
+            };
+
+            timer.Start();
         }
         /// <summary>
         /// 事件的显示/隐式声明

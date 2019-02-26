@@ -1,11 +1,10 @@
 ﻿<Properties StartupConfiguration="{2695B4FD-983D-45E8-AE1A-CE99D0C10B50}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DelegateAndEvent/NormalGreeting.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DelegateAndEvent/Program.cs">
     <Files>
-      <File FileName="DelegateAndEvent/Program.cs" Line="78" Column="15" />
+      <File FileName="DelegateAndEvent/Program.cs" Line="85" Column="24" />
       <File FileName="DelegateAndEvent/Client.cs" Line="24" Column="5" />
       <File FileName="DelegateAndEvent/Dealer.cs" Line="38" Column="1" />
       <File FileName="DelegateAndEvent/GoogsEventHandler.cs" Line="6" Column="43" />
-      <File FileName="DelegateAndEvent/NormalGreeting.cs" Line="7" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.DelegateAndEvent PreferredExecutionTarget="MonoDevelop.Default" />

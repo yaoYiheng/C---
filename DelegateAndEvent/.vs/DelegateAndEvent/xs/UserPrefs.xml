@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{2695B4FD-983D-45E8-AE1A-CE99D0C10B50}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DelegateAndEvent/Heater.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DelegateAndEvent/Program.cs">
     <Files>
-      <File FileName="DelegateAndEvent/Program.cs" Line="80" Column="33" />
-      <File FileName="DelegateAndEvent/Heater.cs" Line="26" Column="24" />
+      <File FileName="DelegateAndEvent/Program.cs" Line="75" Column="19" />
+      <File FileName="DelegateAndEvent/Heater.cs" Line="54" Column="39" />
       <File FileName="DelegateAndEvent/Displayer.cs" Line="10" Column="56" />
-      <File FileName="DelegateAndEvent/Alarm.cs" Line="12" Column="46" />
+      <File FileName="DelegateAndEvent/Alarm.cs" Line="8" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.DelegateAndEvent PreferredExecutionTarget="MonoDevelop.Default" />

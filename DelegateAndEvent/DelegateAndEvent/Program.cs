@@ -72,6 +72,8 @@ namespace DelegateAndEvent
 
             //TimerTest();
 
+
+
             Heater heater = new Heater(90);
 
             Displayer displayer = new Displayer();
